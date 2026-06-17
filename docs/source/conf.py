@@ -1,15 +1,16 @@
-# Configuration file for the Sphinx documentation builder.
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#        Configuration file for the Sphinx documentation builder.
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# -- Project information
+# -- Project information -----------------------------------------------------
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project   = 'RECOWA'
+copyright = '2026, J. Pianezze'
+author    = 'J. Pianezze'
+release   = '0.0'
+version   = '0.0.0'
 
-release = '0.1'
-version = '0.1.0'
-
-# -- General configuration
+# -- General configuration ---------------------------------------------------
 
 extensions = [
     'sphinx.ext.duration',
@@ -17,7 +18,23 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    'sphinxcontrib.bibtex',
+    'sphinxcontrib.mermaid',
+    'sphinx_substitution_extensions',
+    'sphinx_treeview',
+    'sphinx_togglebutton',
+    'sphinx_design',
+    'myst_parser'
 ]
+
+source_suffix = {
+    ".rst": "restructuredtext",
+    ".md": "markdown",
+}
+
+bibtex_bibfiles        = ['references.bib']
+bibtex_default_style   = 'unsrt'
+bibtex_reference_style = 'author_year'
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),

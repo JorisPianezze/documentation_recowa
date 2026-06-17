@@ -1,22 +1,32 @@
-Welcome to Lumache's documentation!
-===================================
+Welcome to RECOWA's documentation
+============================================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+This documentation presents RECOWA (Regional Coupled Ocean–Wave–Atmosphere system), a framework for building, configuring, and running high-resolution regional coupled simulations. It provides guidance for coupling atmospheric, oceanic, and wave models using the `OASIS <https://oasis.cerfacs.fr/en/home/>`_ coupler and the XIOS server.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+This documentation has been initially developed around the `Meso-NH <http://mesonh.cnrs.fr/>`_, `WW3 <https://polar.ncep.noaa.gov/waves/wavewatch>`_, and `CROCO <https://www.croco-ocean.org>`_ models, and is designed to evolve towards a more general framework capable of integrating additional models such as WRF and NEMO in the future. The possible exchanges between the different components of the coupled system are illustrated in the following figure :
+
+.. figure:: introduction/coupling_MNH_SFX_WW3_CROCO.png
+
+   Diagram illustrating the different fields that can be exchanged between the Meso-NH/SurfEx, WW3 and CROCO models using OASIS coupler.
 
 .. note::
 
-   This project is under active development.
+   This documentation is subject to change, so don't hesitate to `send me <joris.pianezze@cnrs.fr>`_ your improvements, corrections, etc ...
 
 Contents
---------
+************************************************************
 
 .. toctree::
+   :maxdepth: 2
 
-   usage
-   api
+   requirements/requirements
+   installation/installation
+   compilation/compilation
+   preprocessing/preprocessing
+   simulation/simulation
+   togofurther/togofurther
+
+References
+************************************************************
+
+.. bibliography::

@@ -1,0 +1,127 @@
+.. _installation:
+
+Installation
+*********************************************************
+
+You have the flexibility to install models in any directory you prefer.
+However, I recommend dedicating a specific directory for your case study, particularly if you plan to test new versions of models, compilers, or libraries.
+
+.. note::
+
+   The :ref:`installation` and :ref:`compilation` steps must be performed on the machines where you will run the simulations.
+
+.. _get_models_template:
+
+Get models template
+====================================
+
+To get the models template directory, do :
+
+.. code-block:: bash
+
+   git clone https://github.com/JorisPianezze/models_tmpl_for_mesonh_ww3_croco_coupling.git
+
+Rename the directory into your own case study : 
+
+.. code-block:: bash
+
+   mv models_tmpl_for_mesonh_ww3_croco_coupling models_YOURCASESTUDY
+
+This coupling system has been tested on several machines. First you need to verify your maching with
+
+.. code-block:: bash
+
+   cd models_YOURCASESTUDY
+   ./create_environment.sh
+
+If your machine has already been tested you need to have a script :file:`environment.sh` inside models_YOURCASESTUDY directory.
+
+.. note::
+
+   * This environment has already been tested in your machine.
+   * Different scripts will call :file:`environment.sh` file. You also have to use this script when you will compile and run models.
+
+.. _install_NETCDF:
+
+NetCDF
+====================================
+
+First, you need to download and install NetCDF library. To download tar.gz files, do :
+
+.. code-block:: bash
+
+   cd libraries
+   ./download_aec_hdf_netcdf_libraries.sh
+
+You need to have 4 new tar.gz files in the libraries directory.
+
+.. _install_OASIS:
+
+OASIS
+====================================
+
+To download OASIS you have to set :code:`download_oasis=true` in :file:`models_YOURCASESTUDY/download_oasis_mesonh_ww3_croco_models.sh` and then execute this file :
+
+.. code-block:: bash
+
+   cd models_YOURCASESTUDY
+   ./download_oasis_mesonh_ww3_croco_models.sh
+
+.. _install_MNH:
+
+Meso-NH
+====================================
+
+To download Meso-NH you have to set :code:`download_mesonh=true` in :file:`models_YOURCASESTUDY/download_oasis_mesonh_ww3_croco_models.sh` and then execute this file :
+
+.. code-block:: bash
+
+   cd models_YOURCASESTUDY
+   ./download_oasis_mesonh_ww3_croco_models.sh
+
+.. note::
+
+   This version of Meso-NH already contains NetCDF and oasis3-mct_5.0 libraries and you can compile it automatically when you compile Meso-NH but I recommend to compile NETCDF and OASIS separately to be indepedent of Meso-NH.
+
+.. _install_CROCO:
+
+CROCO
+=============================
+
+To download CROCO you have to set :code:`download_croco=true` in :file:`models_YOURCASESTUDY/download_oasis_mesonh_ww3_croco_models.sh` and then execute this file :
+
+.. code-block:: bash
+
+   cd models_YOURCASESTUDY
+   ./download_oasis_mesonh_ww3_croco_models.sh
+
+.. _install_WW3:
+
+WW3
+=============================
+
+To download WW3 you have to set :code:`download_ww3=true` in :file:`models_YOURCASESTUDY/download_oasis_mesonh_ww3_croco_models.sh` and then execute this file :
+
+.. code-block:: bash
+
+   cd models_YOURCASESTUDY
+   ./download_oasis_mesonh_ww3_croco_models.sh
+
+Check files and directories tree
+=================================
+
+At the end of this section, you need to have following script and directories :
+
+.. code-block:: bash
+
+   models_YOURCASESTUDY/
+   ├── croco-v2.1.0
+   ├── environment.sh
+   ├── libraries
+   │   ├── hdf5-1.14.6.tar.gz
+   │   ├── libaec-1.1.3.tar.gz
+   │   ├── netcdf-c-4.9.3.tar.gz
+   │   ├── netcdf-fortran-4.6.1.tar.gz
+   ├── MNH-V5-7-2
+   ├── oasis3-mct_5.2
+   └── WW3-v7.14

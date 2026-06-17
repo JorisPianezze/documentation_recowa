@@ -1,8 +1,8 @@
 [build-system]
-requires = ["flit_core >=3.2,<4"]
+requires      = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "lumache"
-authors = [{name = "Graziella", email = "graziella@lumache"}]
+name    = "RECOWA"
+authors = [{name = "Joris Pianezze", email = "joris.pianezze@cnrs.fr"}]
 dynamic = ["version", "description"]

@@ -1,9 +1,6 @@
-Template for the Read the Docs tutorial
+RECOWA's documentation
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+Git repository for RECOWA's documentation.
 
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+You can read the documentation here: https://recowa.readthedocs.io
